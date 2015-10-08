@@ -1,0 +1,77 @@
+.Bdrs\(5px\) {
+  border-radius: 5px;
+}
+.Bgc\(\#1c6ce4\) {
+  background-color: #1c6ce4;
+}
+.Bgc\(\#fff\) {
+  background-color: #fff;
+}
+.Bxz\(bb\) {
+  box-sizing: border-box;
+}
+.C\(\#fff\) {
+  color: #fff;
+}
+.C\(gray\) {
+  color: gray;
+}
+.D\(f\) {
+  display: flex;
+}
+.Ai\(c\) {
+  align-items: center;
+}
+.Jc\(sb\) {
+  justify-content: space-between;
+}
+.Ff\(ss\) {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.Fw\(200\) {
+  font-weight: 200;
+}
+.Fw\(100\) {
+  font-weight: 100;
+}
+.Fz\(30px\) {
+  font-size: 30px;
+}
+.H\(7px\) {
+  height: 7px;
+}
+.H\(67px\) {
+  height: 67px;
+}
+.H\(50px\) {
+  height: 50px;
+}
+.List\(n\) {
+  list-style-type: none;
+}
+.M\(a\) {
+  margin: auto;
+}
+.My\(a\) {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.Mend\(17px\) {
+  margin-right: 17px;
+}
+.Ov\(h\) {
+  overflow: hidden;
+}
+.P\(10px\) {
+  padding: 10px;
+}
+.Px\(15px\) {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.Ta\(c\) {
+  text-align: center;
+}
+.W\(100\%\) {
+  width: 100%;
+}
