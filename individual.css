@@ -43,6 +43,7 @@ a._31140097 {
 .navbar-link {
     color: #1C6CE4;
     text-decoration: none;
+    color: #484748;
 }
 
 .navbar-link:hover {
@@ -83,4 +84,5 @@ width: 100%;position: relative;top: -25px;}
 h1._24493323 {
     font-family: avenir;
     margin-left: 10px;
+    color: #484748;
 }
