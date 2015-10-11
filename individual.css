@@ -41,7 +41,6 @@ a._31140097 {
 }
 
 .navbar-link {
-    color: #1C6CE4;
     text-decoration: none;
     color: #484748;
     font-family: sinkin-sans;
@@ -49,7 +48,7 @@ a._31140097 {
 }
 
 .navbar-link:hover {
-font-weight: bold;}
+color: #1C6CE4;}
 
 ._09157142 {
 height: 100%;overflow: hidden;display: flex;align-items: center;}
