@@ -49,8 +49,7 @@ a._31140097 {
 }
 
 .navbar-link:hover {
-    text-decoration: underline;
-}
+font-weight: bold;}
 
 ._09157142 {
 height: 100%;overflow: hidden;display: flex;align-items: center;}
