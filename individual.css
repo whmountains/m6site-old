@@ -44,6 +44,8 @@ a._31140097 {
     color: #1C6CE4;
     text-decoration: none;
     color: #484748;
+    font-family: sinkin-sans;
+    font-size: 13px;
 }
 
 .navbar-link:hover {
@@ -88,12 +90,12 @@ h1._24493323 {
 }
 
 h1._95052995 {
-    font-family: avenir;
+    font-family: sinkin-sans;
     font-size: 46px;
     margin-bottom: 0px;
 }
 
 h2._24105610 {
     margin: 0 0 20px 0;
-    font-family: avenir;
+    font-family: sinkin-sans;
 }
