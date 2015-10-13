@@ -46,8 +46,8 @@ a._31140097 {
 .navbar-link {
     text-decoration: none;
     color: inherit;
-    font-family: sinkin-sans;
-    font-size: 13px;
+    font-family: roboto;
+    font-size: 17px;
 }
 
 .navbar-link:hover {
@@ -75,6 +75,7 @@ img._60833622 {
     text-align: center;
     color: white;
     margin: auto;
+    font-family: roboto;
 }
 
 ._46146086 {
@@ -87,19 +88,23 @@ img._60833622 {
 }
 
 h1._24493323 {
-    font-family: sinkin-sans;
+    font-family: roboto;
     margin-left: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
 }
 
 h1._95052995 {
-    font-family: sinkin-sans;
+    font-family: inherit;
     font-size: 46px;
     margin: 0px;
+    font-weight: 500;
 }
 
 h2._24105610 {
-    font-family: sinkin-sans;
+    font-family: inherit;
     margin: 0px;
+    font-weight: 300;
 }
 
 
