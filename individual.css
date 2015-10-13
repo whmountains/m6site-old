@@ -65,7 +65,6 @@ img._60833622 {
     width: 100%;
     position: relative;
     top: -25px;
-    -webkit-filter: brightness(44%);
 }
 
 ._69787797 {
@@ -107,4 +106,14 @@ h1._95052995 {
 h2._24105610 {
     margin: 0 0 20px 0;
     font-family: sinkin-sans;
+}
+
+
+._05255859 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: linear-gradient(to right, rgb(81, 160, 131) 0%, rgb(32, 99, 156) 100%);
 }
