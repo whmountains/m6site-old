@@ -70,6 +70,7 @@ img._60833622 {
 
 ._69787797 {
     height: calc((100vh - 74px) * 0.7);
+    position: relative;
 }
 
 ._49109951 {
@@ -85,7 +86,6 @@ img._60833622 {
 }
 
 ._69787797 {
-    position: absolute;
 }
 
 h1._24493323 {
