@@ -7,7 +7,6 @@
 
 ._29606628 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 67px;
     box-sizing: border-box;
@@ -143,4 +142,8 @@ h2._24105610 {
 
 ._51286804 {
     height: 67px;
+}
+
+._50792474 {
+    flex-grow: 1;
 }
