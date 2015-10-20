@@ -127,3 +127,11 @@ h2._24105610 {
     left: 0px;
     display: flex;
 }
+
+._33612487 {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1000;
+}
