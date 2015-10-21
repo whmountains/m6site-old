@@ -35,17 +35,12 @@ img._24532326 {
 ul._86869268 {
     display: flex;
     list-style-type: none;
+    height: 100%;
 }
 
 .navbar-item {
     padding-left: 20px;
-}
-
-a._31140097 {
-    background-color: white;
-    color: #1C6CE4;
-    padding: 10px;
-    border-radius: 7px;
+    height: 100%;
 }
 
 .navbar-link {
@@ -53,6 +48,9 @@ a._31140097 {
     color: inherit;
     font-family: roboto;
     font-size: 17px;
+    height: 100%;
+    line-height: 67px;
+    padding-left: 20px;
 }
 
 .navbar-link:hover {
@@ -139,4 +137,9 @@ h2._24105610 {
     position: absolute;
     top: 0px;
     width: 100%;
+}
+
+._31140097 {
+    font-size: larger;
+    font-weight: bolder;
 }
