@@ -50,11 +50,13 @@ ul._86869268 {
     font-size: 17px;
     height: 100%;
     line-height: 67px;
-    padding-left: 20px;
+    margin-left: 20px;
+    box-sizing: border-box;
 }
 
 .navbar-link:hover {
     color: #82B1FF;
+    border-bottom: 3px solid white;
 }
 
 ._09157142 {
