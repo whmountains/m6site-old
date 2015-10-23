@@ -159,4 +159,11 @@ h2._24105610 {
 .pageslice {
     display: flex;
 }
+
+._51286714 {
+    margin: auto;
+}
+
+._51286814 {
+    height: calc( (100vh - 67px) * 0.2 );
 }
