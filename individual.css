@@ -76,10 +76,9 @@ img._60833622 {
 }
 
 ._49109951 {
+    padding-top: 30px;
     text-align: center;
-    color: white;
     margin: auto;
-    font-family: roboto;
 }
 
 ._46146086 {
@@ -115,6 +114,7 @@ h2._24105610 {
 
 ._19777562 {
     display: flex;
+    flex-direction: column;
 }
 
 ._33612487 {
@@ -138,6 +138,7 @@ h2._24105610 {
     position: absolute;
     top: 0px;
     width: 100%;
+    color: white;
 }
 
 ._31140097 {
@@ -154,6 +155,8 @@ h2._24105610 {
     padding: 10px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
     outline: none;
+    /* display: block; */
+    /* margin: auto; */
 }
 
 .pageslice {
@@ -184,4 +187,17 @@ width: 100%;}
 
 .nobaseline img {
     vertical-align: bottom;
+}
+
+
+.loc-callout-link:hover {
+    text-decoration: underline;
+}
+
+._33116058 {
+    padding-top: 20px;
+}
+
+._03064914 {
+    margin: auto;
 }
