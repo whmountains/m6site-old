@@ -158,6 +158,8 @@ h2._24105610 {
 
 .pageslice {
     display: flex;
+    box-sizing: border-box;
+    align-items: center;
 }
 
 ._51286714 {
@@ -166,4 +168,20 @@ h2._24105610 {
 
 ._51286814 {
     height: calc( (100vh - 67px) * 0.2 );
+}
+
+._40911087 {
+    width: 50%;
+    display: block;
+}
+
+img._00431772 {
+width: 100%;}
+
+._05906121 {
+    width: 50%;
+}
+
+.akdi img {
+    vertical-align: bottom;
 }
