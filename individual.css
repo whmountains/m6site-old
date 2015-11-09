@@ -260,6 +260,8 @@ width: 100%;}
     background-color: #5D648E;
     color: #FBFBFB;
     text-align: right;
+    justify-content: flex-end;
+    padding-right: 20px;
 }
 
 ._39519672 {
