@@ -29,7 +29,7 @@ gulp.task('css', function() {
 })
 
 gulp.task('images:progressive', function() {
-  return gulp.src('src/img/progressive/')
+  return gulp.src('src/img/progressive/**/*')
     .pipe(cache(imagemin({
       interlaced: true,
       progressive: true
@@ -38,7 +38,7 @@ gulp.task('images:progressive', function() {
 })
 
 gulp.task('images:baseline', function() {
-  return gulp.src('src/img/progressive/')
+  return gulp.src('src/img/baseline/**/*')
     .pipe(cache(imagemin({
       interlaced: false,
       progressive: false
@@ -47,7 +47,7 @@ gulp.task('images:baseline', function() {
 })
 
 gulp.task('images:other', function() {
-  return gulp.src('src/img/progressive/')
+  return gulp.src('src/img/other/**/*')
     .pipe(cache(imagemin({
       optimizationLevel: 7,
       multipass: true
