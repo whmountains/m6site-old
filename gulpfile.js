@@ -81,7 +81,7 @@ gulp.task('clean-deep', function() {
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      basedir: 'dist'
+      baseDir: './dist'
     }
   })
 })
