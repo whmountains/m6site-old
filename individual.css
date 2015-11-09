@@ -178,13 +178,17 @@ h2._24105610 {
 ._40911087 {
     width: 50%;
     display: block;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 img._00431772 {
 width: 100%;}
 
 ._05906121 {
-    width: 50%;
+    width: 40%;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 .nobaseline img {
@@ -207,7 +211,6 @@ width: 100%;}
 ._12446073 {
     height: 300px;
     margin-top: 15px;
-    margin-bottom: 100px;
 }
 
 ._30193573 {
@@ -267,7 +270,7 @@ width: 100%;}
 
 ._39519672 {
     height: 200px;
-    background: #E5E8FD;
+    background-color: #e8e8e8;
 }
 
 ._49488300 {
