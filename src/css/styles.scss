@@ -1,0 +1,10 @@
+@import 'normalize.css';
+@import 'global.scss';
+@import 'mixins.scss';
+
+// legacy stuff
+@import 'individual.css';
+
+// new modules
+@import 'mnav.scss';
+@import 'hero.scss';
