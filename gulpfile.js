@@ -17,7 +17,7 @@ gulp.task('hello', function() {
 })
 
 gulp.task('css', function() {
-  return gulp.src('src/css/styles.less')
+  return gulp.src('src/css/styles.sass')
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(concat('styles.css'))
