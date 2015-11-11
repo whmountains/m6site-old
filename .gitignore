@@ -27,4 +27,4 @@ build/Release
 node_modules
 
 # Dist dir (should be generated on-demand with gulp)
-dist
+dist/
