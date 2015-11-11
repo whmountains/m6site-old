@@ -4,7 +4,8 @@ var cache       = require('gulp-cache')
 var runSequence = require('run-sequence')
 
 var gulp        = require('gulp')
-var less        = require('gulp-less')
+// var less        = require('gulp-less')
+var sass        = require('gulp-sass')
 var concat      = require('gulp-concat')
 var mincss      = require('gulp-minify-css')
 var imagemin    = require('gulp-imagemin')
@@ -16,9 +17,9 @@ gulp.task('hello', function() {
 })
 
 gulp.task('css', function() {
-  return gulp.src('src/css/*')
+  return gulp.src('src/css/styles.less')
     .pipe(sourcemaps.init())
-    .pipe(gulpif('*.less', cache(less())))
+    .pipe(sass())
     .pipe(concat('styles.css'))
     .pipe(mincss())
     .pipe(sourcemaps.write())
