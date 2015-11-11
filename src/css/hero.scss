@@ -1,11 +1,11 @@
 // hero
 .hero {
-  height: calc(~"(100vh - 74px) * 0.7");
+  height: calc((100vh - 74px) * 0.7);
   position: relative;
 }
 
 .hero__imgbx {
-  .stack-layer;
+  @extend .stack-layer;
   overflow: hidden;
   display: flex;
   align-items: center;
