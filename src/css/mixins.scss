@@ -11,3 +11,10 @@
   color: inherit;
 }
 
+.pageslice {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}

@@ -89,22 +89,6 @@ h2._24105610 {
     /* margin: auto; */
 }
 
-.pageslice {
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-._51286714 {
-    margin: auto;
-}
-
-._51286814 {
-    height: calc( (100vh - 67px) * 0.2 );
-}
-
 ._40911087 {
     width: 50%;
     display: block;
