@@ -2,6 +2,7 @@ var sourcemaps  = require('gulp-sourcemaps')
 var gulpif      = require('gulp-if')
 var cache       = require('gulp-cache')
 var runSequence = require('run-sequence')
+var flatten     = require('gulp-flatten')
 
 var gulp        = require('gulp')
 // var less        = require('gulp-less')
@@ -35,6 +36,7 @@ gulp.task('images:progressive', function() {
       interlaced: true,
       progressive: true
     })))
+    .pipe(flatten())
     .pipe(gulp.dest('dist/img'))
 })
 
@@ -44,6 +46,7 @@ gulp.task('images:baseline', function() {
       interlaced: false,
       progressive: false
     })))
+    .pipe(flatten())
     .pipe(gulp.dest('dist/img'))
 })
 
@@ -53,18 +56,21 @@ gulp.task('images:other', function() {
       optimizationLevel: 7,
       multipass: true
     })))
+    .pipe(flatten())
     .pipe(gulp.dest('dist/img'))
 })
 
 gulp.task('images', ['images:progressive', 'images:baseline', 'images:other'])
 
 gulp.task('fonts', function() {
-  return gulp.src('src/fonts/*')
+  return gulp.src('src/fonts/**/*')
+    .pipe(flatten())
     .pipe(gulp.dest('dist/fonts'))
 })
 
 gulp.task('html', function() {
   return gulp.src('src/html/**/*')
+    .pipe(flatten())
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({
       stream: true
@@ -72,11 +78,11 @@ gulp.task('html', function() {
 })
 
 gulp.task('clean', function() {
-  del('dist/**/*!(dist/img/**/*)')
+  del('dist/**/*', '!dist/img/**/*')
 })
 
 gulp.task('clean-deep', function() {
-  del('dist/**/*')
+  del('dist')
 })
 
 gulp.task('browserSync', function() {
