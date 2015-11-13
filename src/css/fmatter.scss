@@ -1,0 +1,48 @@
+// variables
+$title-height: 80px;
+
+// general structure
+.fmatter {
+  @extend .pageslice;
+  height: 90vh;
+}
+.fmatter__cc {
+  margin: auto;
+  display: flex;
+  flex-direction:column;
+  max-width: 900px;
+}
+
+
+// main title
+.fmatter__brand {
+  height: $title-height;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.fmatter__logo {
+  @extend .nobaseline;
+  height: 100%
+}
+.fmatter__brandname {
+  font-size: 0.7 * $title-height;
+  margin: 0px;
+  padding-left: 20px;
+  color: $font-color;
+}
+
+//subtext
+.fmatter__subtitle {
+  font-size: 35px;
+  text-align: center;
+  color: $font-color;
+  font-weight: bold;
+}
+.fmatter__desc {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28.8px;
+  color: $font-color;
+  text-align: center;
+}
