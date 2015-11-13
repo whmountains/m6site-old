@@ -85,7 +85,7 @@ gulp.task('clean-deep', function() {
   del('dist')
 })
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync', ['default'], function() {
   browserSync({
     server: {
       baseDir: './dist'
@@ -95,7 +95,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('default', ['css', 'images', 'fonts', 'html'])
 
-gulp.task('watch', ['default', 'browserSync'], function() {
+gulp.task('watch', ['browserSync'], function() {
   gulp.watch('src/html/**/*', ['html'])
   gulp.watch('src/css/**/*', ['css'])
   gulp.watch('src/img/progressive/**/*', ['images:progressive'])
