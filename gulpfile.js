@@ -60,6 +60,7 @@ gulp.task('images:other', function() {
     .pipe(gulp.dest('dist/img'))
 })
 
+// TODO: only process changed images
 gulp.task('images', ['images:progressive', 'images:baseline', 'images:other'])
 
 gulp.task('fonts', function() {
@@ -77,6 +78,7 @@ gulp.task('html', function() {
     }))
 })
 
+// TODO: this isn't properly ignoring images
 gulp.task('clean', function() {
   del('dist/**/*', '!dist/img/**/*')
 })
