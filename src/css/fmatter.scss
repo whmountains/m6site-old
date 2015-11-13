@@ -1,22 +1,19 @@
-// variables
-$title-height: 80px;
-
 // general structure
 .fmatter {
   @extend .pageslice;
-  height: 90vh;
+  height: 70vh;
 }
 .fmatter__cc {
   margin: auto;
   display: flex;
   flex-direction:column;
-  max-width: 900px;
+  max-width: $wideText;
 }
 
 
 // main title
 .fmatter__brand {
-  height: $title-height;
+  height: $titleSize;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -26,23 +23,23 @@ $title-height: 80px;
   height: 100%
 }
 .fmatter__brandname {
-  font-size: 0.7 * $title-height;
+  font-size: 0.7 * $titleSize;
   margin: 0px;
   padding-left: 20px;
-  color: $font-color;
+  color: $fg;
 }
 
 //subtext
 .fmatter__subtitle {
-  font-size: 35px;
+  font-size: $subtitleSize;
   text-align: center;
-  color: $font-color;
+  color: $fg;
   font-weight: bold;
 }
 .fmatter__desc {
-  font-size: 20px;
+  font-size: $descSize;
   font-weight: 300;
   line-height: 28.8px;
-  color: $font-color;
+  color: $fg;
   text-align: center;
 }

@@ -1,0 +1,34 @@
+.lagopic {
+  @extend .pageslice;
+  @extend .pageslice_bg_alt;
+  @include reset(spacing)
+  flex-direction: column;
+}
+
+.lagopic__prec {
+  display: flex;
+  height: 15vh
+}
+
+.lagopic__pretxt {
+  font-size: $descSize;
+  max-width: $narrowText;
+  text-align: center;
+  margin: auto;
+  color: $fg-alt;
+}
+
+.lagopic__img {
+  width: 100%;
+}
+
+.lagopic__postc {
+  @extend .desc-ctr;
+  padding: 25px;
+}
+.lagopic__posttxt {
+  font-size: $descSize;
+  max-width: $narrowText;
+  text-align: center;
+  color: $fg-alt;
+}

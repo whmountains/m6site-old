@@ -1,6 +1,5 @@
 var sourcemaps  = require('gulp-sourcemaps')
 var gulpif      = require('gulp-if')
-var cache       = require('gulp-cache')
 var runSequence = require('run-sequence')
 var flatten     = require('gulp-flatten')
 
@@ -32,30 +31,30 @@ gulp.task('css', function() {
 
 gulp.task('images:progressive', function() {
   return gulp.src('src/img/progressive/**/*')
-    .pipe(cache(imagemin({
+    .pipe(imagemin({
       interlaced: true,
       progressive: true
-    })))
+    }))
     .pipe(flatten())
     .pipe(gulp.dest('dist/img'))
 })
 
 gulp.task('images:baseline', function() {
   return gulp.src('src/img/baseline/**/*')
-    .pipe(cache(imagemin({
+    .pipe(imagemin({
       interlaced: false,
       progressive: false
-    })))
+    }))
     .pipe(flatten())
     .pipe(gulp.dest('dist/img'))
 })
 
 gulp.task('images:other', function() {
   return gulp.src('src/img/other/**/*')
-    .pipe(cache(imagemin({
+    .pipe(imagemin({
       optimizationLevel: 7,
       multipass: true
-    })))
+    }))
     .pipe(flatten())
     .pipe(gulp.dest('dist/img'))
 })

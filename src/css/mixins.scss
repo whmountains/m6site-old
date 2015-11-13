@@ -11,14 +11,31 @@
   color: inherit;
 }
 
-.pageslice {
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
 .nobaseline {
   vertical-align: bottom;
+}
+
+// pageslice
+.pageslice {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: $bg;
+}
+.pageslice_bg_alt {
+  background-color: $bg-alt;
+}
+.pageslice__cc {
+  margin: auto;
+}
+
+@mixin reset($targets...) {
+  @each $target in $targets {
+    @if $target == 'spacing' {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
