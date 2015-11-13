@@ -1,0 +1,30 @@
+.itxt {
+  @extend .pageslice;
+  margin: 100px;
+}
+
+.itxt__imgc {
+  @extend .nobaseline;
+  width: 40%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.itxt__img {
+  width: 100%;
+}
+
+.itxt__txtc {
+  width: 50%;
+  display: block;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.itxt__txth {
+  // Hi there, no styles here yet :)
+}
+
+.itxt__txtb {
+  // None here either!  The defaults are fine for us
+}

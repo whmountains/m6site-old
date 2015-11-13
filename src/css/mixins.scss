@@ -1,0 +1,24 @@
+.stack-layer {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  color: white;
+}
+
+.linkreset {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pageslice {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nobaseline {
+  vertical-align: bottom;
+}

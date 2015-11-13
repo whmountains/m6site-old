@@ -1,0 +1,83 @@
+// hero
+.hero {
+  height: calc((100vh - 74px) * 0.7);
+  position: relative;
+}
+
+.hero__imgbx {
+  @extend .stack-layer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero__img {
+  width: 100%;
+  position: relative;
+  top: -25px;
+}
+
+.hero__grad {
+  @extend .stack-layer;
+}
+
+.hero__grad_wash_light {
+  background-image: linear-gradient(to right, rgba(81, 127, 160, 0.17) 0%, rgba(32, 93, 156, 0.45) 100%);
+}
+
+.hero__grad_wash_med {
+  background-image: linear-gradient(to right, rgba(81, 160, 131, 0.31) 0%, rgba(32, 99, 156, 0.55) 100%);
+}
+
+.hero__tc {
+  @extend .stack-layer;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__tu {
+  padding-top: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+.hero__txu {
+  font-family: inherit;
+  font-size: 46px;
+  margin: 0px;
+  font-weight: 500;
+  margin-bottom: .2%;
+}
+
+.hero__txsub {
+  font-family: inherit;
+  margin: 0px;
+  font-weight: 300;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.hero__actb {
+  border-radius: 2px;
+  border-style: none;
+  background-color: #3F51B5;
+  margin-top: 15px;
+  font-size: 35px;
+  padding: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  outline: none;
+  /* display: block; */
+  /* margin: auto; */
+}
+
+.hero__lowerc {
+  margin: auto;
+}
+
+.hero__infolink {
+  @extend .linkreset;
+}
+
+.hero__infolink:hover {
+    text-decoration: underline;
+}
