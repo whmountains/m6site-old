@@ -1,7 +1,8 @@
 {
   "name": "refugio",
   "version": "1.0.0",
-  "description": "",
+  "description": "M6 Adventures Website",
+  "repository": "sudo chown -R $USER /usr/local/",
   "main": "index.js",
   "scripts": {
     "start": "node ./devserver.js",
