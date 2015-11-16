@@ -1,4 +1,6 @@
 .bhead {
+  margin-top: 15px;
+  margin-bottom: 15px;
   @extend .pageslice;
   height: calc( (100vh - 67px) * 0.14 );
   background-color: #3F51B5;
