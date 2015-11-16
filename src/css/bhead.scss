@@ -1,8 +1,10 @@
 .bhead {
   @extend .pageslice;
   height: calc( (100vh - 67px) * 0.14 );
+  background-color: #3F51B5;
 }
 
 .bhead__txt {
   margin: auto;
+  color: white;
 }
