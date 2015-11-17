@@ -74,6 +74,14 @@
   margin: auto;
 }
 
+
+.hero__info {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
 .hero__infolink {
   @extend .linkreset;
 }
