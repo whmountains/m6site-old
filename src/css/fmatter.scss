@@ -1,10 +1,15 @@
 // general structure
 .fmatter {
   @extend .pageslice;
-  height: 400px;
+  height: 1000px;
+  background: $bg-1;
+  flex-direction: column;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
-.fmatter__cc {
-  margin: auto;
+.fmatter__textc {
+  margin-top: 40px;
   display: flex;
   flex-direction:column;
   max-width: $wideText;
@@ -17,14 +22,14 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
-  color: $fg;
+  color: $fg-1;
   font-size: 0.7 * $titleSize;
 }
 
 .fmatter__subtitle {
   font-size: $subtitleSize;
   text-align: center;
-  color: $fg;
+  color: $fg-1;
   font-weight: normal;
 }
 
@@ -32,6 +37,7 @@
 // buttons
 .fmatter__buttons {
   margin-top: 15px;
+  margin-bottom: 75px;
   display: flex;
   justify-content: center;
 }
@@ -65,5 +71,30 @@
 
 .fmatter__btnl {
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 400;
+  color: desaturate(darken($fg-1, 25), 75);
+}
+
+
+//image
+.fmatter__imgc {
+  position: absolute;
+  left: 0px;
+  bottom: 209px;
+  right: 0px;
+  display: flex;
+}
+
+.fmatter__imgic {
+  width: 800px;
+  margin: auto;
+}
+
+.fmatter__img {
+  width: 100%;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: 0 0 20px 0 rgba(13,31,41,0.2);
+  @extend .nobaseline;
 }

@@ -1,7 +1,8 @@
 .itxt {
   @extend .pageslice;
   margin-bottom: 100px;
-} 
+  background-color: $bg-3;
+}
 
 .itxt__imgc {
   @extend .nobaseline;

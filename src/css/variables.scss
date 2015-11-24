@@ -1,8 +1,23 @@
 // color schemes: ---------------------------------------------------
 
+// front page scheme
+$bg-1: radial-gradient(circle farthest-side at right bottom,#fefdfe 5%,#f8cdda 25%,#1d2b64 80%,#0e153a 98%);
+// $bg-1: radial-gradient(circle farthest-side at right bottom,#fff 8%,#154866 70%,#000);
+$fg-1: #FFFDFA;
+
+// intro slice
+// $bg-2: hsla(0,22%,56%,0.45);
+$bg-2: #1E8184;
+$fg-2: $fg-1;
+$fg-mute-2: rgba(0,0,0,0.5);
+
+// image text slice
+$bg-3: $fg-1;
+$fg-3: #272727;
+
 // scheme 1
 $bg: white;
-$fg: #4D4D4D;
+$fg: #FFFDFA;
 $highlight: #3E6BB4;
 
 // scheme 2

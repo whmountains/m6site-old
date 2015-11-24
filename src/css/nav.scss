@@ -1,8 +1,10 @@
 .nav {
-  @extend .pageslice;
-  // background-color: darken($bg, 5);
-  // border-bottom: solid 1px gray;
   height: 60px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  padding-right: 25px;
 }
 
 .nav__title {
@@ -14,7 +16,14 @@
 }
 
 .nav__link {
-  $spaceBetween: 30px;
-  padding-left: $spaceBetween/2;
-  padding-right: $spaceBetween/2;
+  @extend .linkreset;
+  color: $fg-1;
+  $spaceBetween: 10px;
+  padding-left: $spaceBetween;
+  // padding-right: $spaceBetween/2;
+  font-weight: 400;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
 }
