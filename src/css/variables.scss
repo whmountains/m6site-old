@@ -15,6 +15,12 @@ $fg-mute-2: rgba(0,0,0,0.5);
 $bg-3: $fg-1;
 $fg-3: #272727;
 
+// bigtext slice
+$bg-4: #fff;
+$fg-4: #666;
+
+// legacy schemes
+
 // scheme 1
 $bg: white;
 $fg: #FFFDFA;
@@ -35,3 +41,5 @@ $descSize: 20px;
 // widths: -------------------------------------------------------
 $wideText: 900px;
 $narrowText: 600px;
+
+$paddingBase: 50px;
