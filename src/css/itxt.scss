@@ -12,6 +12,7 @@
 .itxt__imgc {
   @extend .nobaseline;
   @include reset(spacing);
+  margin-right: 40px;
 }
 
 .itxt__img {

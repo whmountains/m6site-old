@@ -45,12 +45,10 @@ $interITMargin: 10px;
   // @include reset(spacing);
   border-width: 0px;
   width: 100%;
+  max-width: 800px;
+  background-color: transparent;
 }
 
-.bpk__slides {
-  height: 500px;
-  overflow: hidden;
-}
 
 //post text and button
 
