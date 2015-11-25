@@ -1,6 +1,6 @@
 .itxt {
   @extend .pageslice;
-  margin-bottom: $paddingBase;
+  margin-bottom: $paddingBase*2;
   background-color: $bg-4;
 }
 
@@ -11,7 +11,7 @@
 
 .itxt__imgc {
   @extend .nobaseline;
-  padding-left: 0px;
+  @include reset(spacing);
 }
 
 .itxt__img {
