@@ -2,6 +2,7 @@ var sourcemaps  = require('gulp-sourcemaps')
 var gulpif      = require('gulp-if')
 var runSequence = require('run-sequence')
 var flatten     = require('gulp-flatten')
+var changed     = require('gulp-changed')
 
 var gulp        = require('gulp')
 // var less        = require('gulp-less')
@@ -29,34 +30,38 @@ gulp.task('css', function() {
     }))
 })
 
+var IMGDIR = 'dist/img';
 gulp.task('images:progressive', function() {
   return gulp.src('src/img/progressive/**/*')
+    .pipe(changed(IMGDIR))
     .pipe(imagemin({
       interlaced: true,
       progressive: true
     }))
     .pipe(flatten())
-    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest(IMGDIR))
 })
 
 gulp.task('images:baseline', function() {
   return gulp.src('src/img/baseline/**/*')
+    .pipe(changed(IMGDIR))
     .pipe(imagemin({
       interlaced: false,
       progressive: false
     }))
     .pipe(flatten())
-    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest(IMGDIR))
 })
 
 gulp.task('images:other', function() {
   return gulp.src('src/img/other/**/*')
+    .pipe(changed(IMGDIR))
     .pipe(imagemin({
       optimizationLevel: 7,
       multipass: true
     }))
     .pipe(flatten())
-    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest(IMGDIR))
 })
 
 // TODO: only process changed images
@@ -72,6 +77,15 @@ gulp.task('html', function() {
   return gulp.src('src/html/**/*')
     .pipe(flatten())
     .pipe(gulp.dest('dist'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+})
+
+gulp.task('js', function() {
+  return gulp.src('src/js/**/*')
+    .pipe(flatten())
+    .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -94,7 +108,7 @@ gulp.task('browserSync', ['default'], function() {
   })
 })
 
-gulp.task('default', ['css', 'images', 'fonts', 'html'])
+gulp.task('default', ['css', 'images', 'fonts', 'html', 'js'])
 
 gulp.task('watch', ['browserSync'], function() {
   gulp.watch('src/html/**/*', ['html'])

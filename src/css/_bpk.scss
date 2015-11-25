@@ -4,6 +4,7 @@
   background-color: $bg-5;
   flex-direction: column;
   padding-top: $paddingBase;
+  padding-bottom: $paddingBase * 0.75;
 }
 
 
@@ -37,4 +38,40 @@ $interITMargin: 10px;
   font-size: 17px;
   width: 700px;
   text-align: center;
+}
+
+//image slider
+.bpk__imgslider {
+  // @include reset(spacing);
+  border-width: 0px;
+  width: 100%;
+}
+
+.bpk__slides {
+  height: 500px;
+  overflow: hidden;
+}
+
+//post text and button
+
+.bpk__postc {
+  display: flex;
+  align-items: center;
+  width: 800px;
+}
+
+.bpk__posttxt {
+  text-align: right;
+  margin-right: 15px;
+}
+
+.bpk__picbtn {
+  background-color: #5f9744;
+  width: 500px;
+  font-size: 18px;
+  line-height: 1.3;
+  padding: 10px 10px;
+  color: #fffdfa;
+  border: none;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,.2);
 }
