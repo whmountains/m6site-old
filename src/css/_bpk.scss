@@ -1,0 +1,40 @@
+.bpk {
+  @extend .pageslice;
+  color: $fg-5;
+  background-color: $bg-5;
+  flex-direction: column;
+  padding-top: $paddingBase;
+}
+
+
+// Title
+.bpk__titlec {
+  display: flex;
+  width: 100%;
+}
+.bpk__title {
+  width: 50%;
+  font-weight: 400;
+}
+
+$interITMargin: 10px;
+.bpk__title_if {
+  text-align: right;
+  margin-right: $interITMargin/2;
+  font-style: italic;
+  font-size: 20px;
+}
+.bpk__title_then {
+  font-size: 25px;
+  margin-top: 50px;
+  margin-left: $interITMargin/2;
+}
+
+
+// Subtitle
+.bpk__subtitle {
+  font-weight: 300;
+  font-size: 17px;
+  width: 700px;
+  text-align: center;
+}
