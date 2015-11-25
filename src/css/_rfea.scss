@@ -1,0 +1,33 @@
+.rfea {
+  @extend .pageslice;
+  width: 100%;
+  color: $fg-6;
+  background-color: rgba(0,0,0,0);
+  flex-direction: column;
+}
+
+.rfea__intro {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.rfea__fea {
+  color: $fg-6;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rfea__icon {
+  border-radius: 30px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: $fg-light-6;
+  margin-right: 10px;
+  i {
+    color: #B4835E;
+    font-size: 35px;
+    margin: auto;
+  }
+}

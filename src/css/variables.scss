@@ -24,8 +24,16 @@ $bg-5: #3f5767;
 $fg-5: #FFFDFA;
 
 // rooms slice
-$bg-6: radial-gradient(at top, #b78651, #8a472e);
+$bg-6: radial-gradient(at top, #E7CB98, #8a472e);
 $fg-6: black;
+$fg-light-6: rgba(255,255,255, 0.5);
+
+// cya slice
+$bg-7: rgba(0,0,0,0.5);
+$fg-7: $fg-1;
+
+$bg-8: rgba(0,0,0,0.5);
+$fg-8: rgba($fg-7, 0.4);
 
 // legacy schemes
 
