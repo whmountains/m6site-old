@@ -1,0 +1,9 @@
+.infobar {
+  @extend .pageslice;
+  margin: 20px 0;
+}
+
+.infobar__centerc {
+  margin: auto;
+  font-weight: bolder;
+}
