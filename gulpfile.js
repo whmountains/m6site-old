@@ -12,6 +12,8 @@ var mincss      = require('gulp-minify-css')
 var imagemin    = require('gulp-imagemin')
 var del         = require('del')
 var browserSync = require('browser-sync')
+var critical    = require('critical');
+var ghPages     = require('gulp-gh-pages');
 
 gulp.task('hello', function() {
   console.log('hello, world!')
@@ -73,7 +75,7 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('html', function() {
+gulp.task('html', ['css'], function() {
   return gulp.src('src/html/**/*')
     .pipe(flatten())
     .pipe(gulp.dest('dist'))
@@ -106,6 +108,23 @@ gulp.task('browserSync', ['default'], function() {
       baseDir: './dist'
     }
   })
+})
+
+gulp.task('critical', ['default'], function() {
+  critical.generate({
+    inline: true,
+    base: 'dist/',
+    src: 'index.html',
+    dest: 'dist/index.html',
+    minify: true,
+    width: 1300,
+    height: 800
+  });
+})
+
+gulp.task('deploy', ['default'], function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 })
 
 gulp.task('default', ['css', 'images', 'fonts', 'html', 'js'])
