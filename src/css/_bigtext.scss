@@ -1,0 +1,26 @@
+.bigtext {
+  @extend .pageslice;
+  color: $fg-4;
+  background-color: $bg-4;
+  text-align: center;
+  flex-direction: column;
+  padding-bottom: $paddingBase;
+}
+
+.bigtext__title {
+  width: 815px;
+  font-size: 65px;
+  margin: auto;
+  font-weight: 300;
+}
+
+.bigtext__subtitle {
+  width: 650px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.bigtext__subtitle em {
+  font-weight: 600;
+  font-style: italic;
+}

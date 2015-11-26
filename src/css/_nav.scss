@@ -1,0 +1,29 @@
+.nav {
+  height: 60px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  padding-right: 25px;
+}
+
+.nav__title {
+  @include reset(spacing)
+}
+
+.nav__spacer {
+  flex-grow: 1;
+}
+
+.nav__link {
+  @extend .linkreset;
+  color: $fg-1;
+  $spaceBetween: 10px;
+  padding-left: $spaceBetween;
+  // padding-right: $spaceBetween/2;
+  font-weight: 400;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}

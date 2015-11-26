@@ -1,0 +1,21 @@
+.bhead {
+  margin-bottom: 15px;
+  @extend .pageslice;
+  height: calc( (100vh - 67px) * 0.14 );
+  background-color: #3F51B5;
+  flex-direction: column;
+  height: 20vh;
+}
+
+.bhead__title {
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+.bhead__subtitle {
+  text-align: center;
+  color: white;
+  margin: auto 5%;
+  font-weight: 300;
+}

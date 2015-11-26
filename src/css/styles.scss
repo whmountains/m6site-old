@@ -1,14 +1,20 @@
 //general/global/utility css
 @import 'normalize.css';
+@import 'variables.scss';
 @import 'global.scss';
 @import 'mixins.scss';
 @import 'fonts.scss';
+@import 'flexslider.css';
 
 // BEM blocks
-@import 'mnav.scss';
-@import 'hero.scss';
-@import 'bhead.scss';
-@import 'itxt.scss';
-@import 'wideimg.scss';
-@import 'foot.scss';
-@import 'infobar.scss';
+@import 'bhead';
+@import 'itxt';
+@import 'fmatter';
+@import 'nav';
+@import 'intro';
+@import 'bigtext';
+@import 'acts';
+@import 'bpk';
+@import 'rooms';
+@import 'rfea';
+@import 'cya';
