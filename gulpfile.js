@@ -12,8 +12,9 @@ var mincss      = require('gulp-minify-css')
 var imagemin    = require('gulp-imagemin')
 var del         = require('del')
 var browserSync = require('browser-sync')
-var critical    = require('critical');
-var ghPages     = require('gulp-gh-pages');
+var critical    = require('critical')
+var ghPages     = require('gulp-gh-pages')
+var uglify      = require('gulp-uglify')
 
 gulp.task('hello', function() {
   console.log('hello, world!')
@@ -87,6 +88,7 @@ gulp.task('html', ['css'], function() {
 gulp.task('js', function() {
   return gulp.src('src/js/**/*')
     .pipe(flatten())
+    .pipe(uglify())
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({
       stream: true
@@ -122,7 +124,7 @@ gulp.task('critical', ['default'], function() {
   });
 })
 
-gulp.task('deploy', ['default'], function() {
+gulp.task('deploy', ['critical', 'default'], function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 })
