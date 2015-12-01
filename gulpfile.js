@@ -15,6 +15,8 @@ var browserSync = require('browser-sync')
 var critical    = require('critical')
 var ghPages     = require('gulp-gh-pages')
 var uglify      = require('gulp-uglify')
+var minifyin    = require('gulp-minify-inline')
+var htmlmin     = require('gulp-htmlmin')
 
 gulp.task('hello', function() {
   console.log('hello, world!')
@@ -76,9 +78,32 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('html', ['css'], function() {
+gulp.task('html', function() {
   return gulp.src('src/html/**/*')
     .pipe(flatten())
+    .pipe(gulpif('*.html', htmlmin({
+      removeComments: true,
+      removeCommentsFromCDATA: true,
+      removeCDATASectionsFromCDATA: true,
+      collapseWhitespace: true,
+      conservativeCollapse: true,
+      collapseBooleanAttributes: true,
+      removeAttributeQuotes: false,
+      removeRedundantAttributes: true,
+      preventAttributesEscaping: false,
+      useShortDoctype: true,
+      removeEmptyAttributes: false,
+      removeScriptTypeAttributes: false,
+      removeStyleLinkTypeAttributes: true,
+      removeOptionalTags: false,
+      removeIgnored: true,
+      removeEmptyElements: false,
+      keepClosingSlash: true,
+      caseSensitive: false,
+      minifyJS: true,
+      minifyCSS: true,
+      minifyURLs: false
+    })))
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({
       stream: true
@@ -120,7 +145,7 @@ gulp.task('critical', ['default'], function() {
     dest: 'dist/index.html',
     minify: true,
     width: 1300,
-    height: 800
+    height: 1200
   });
 })
 

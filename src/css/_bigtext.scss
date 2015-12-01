@@ -1,3 +1,6 @@
+// $fLoadingSelector: 'html.fonts-loading-one';
+// $fFallbackSelector: 'html.fonts-fallback-one';
+
 .bigtext {
   @extend .pageslice;
   color: $fg-4;
@@ -5,15 +8,30 @@
   text-align: center;
   flex-direction: column;
   padding-bottom: $paddingBase;
-  font-family: $font;
+  font-family: $fonts;
 }
+
+// #{$fLoadingSelector} .bigtext {
+//   // font is invisible until font is loaded
+//   color: transparent;
+// }
+//
+// #{$fFallbackSelector} .bigtext {
+//   font-family: $fonts-fallback;
+// }
 
 .bigtext__title {
   width: 815px;
   font-size: 65px;
   margin: auto;
   font-weight: 300;
+  height: 152px;
 }
+
+// #{$fFallbackSelector} .bigtext__title {
+//   // allow fallback font to fill screen
+//   width: 100%;
+// }
 
 .bigtext__subtitle {
   width: 650px;
@@ -22,6 +40,6 @@
 }
 
 .bigtext__subtitle em {
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
 }

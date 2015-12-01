@@ -54,7 +54,9 @@ $titleSize: 80px;
 $subtitleSize: 25px;
 $descSize: 20px;
 
-$font: roboto, helvetica, sans-serif;
+$font: roboto;
+$fonts: roboto, helvetica, sans-serif;
+$fonts-fallback: helvetica, sans-serif;
 
 // widths: -------------------------------------------------------
 $wideText: 900px;

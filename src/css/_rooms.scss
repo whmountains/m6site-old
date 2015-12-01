@@ -1,10 +1,17 @@
+// $fLoadingSelector: 'html.fonts-loading-one';
+// $fFallbackSelector: 'html.fonts-fallback-one';
+
 .rooms {
   @extend .pageslice;
   background: $bg-6;
   color: $fg-6;
   flex-direction: column;
-  font-family: $font;
+  font-family: $fonts;
 }
+
+// #{$fLoadingSelector} .rooms {
+//   color: transparent;
+// }
 
 .rooms__title {
   margin-top: 35px;

@@ -1,3 +1,6 @@
+// $fLoadingSelector: 'html.fonts-loading-one';
+// $fFallbackSelector: 'html.fonts-fallback-one';
+
 .bpk {
   @extend .pageslice;
   color: $fg-5;
@@ -5,9 +8,12 @@
   flex-direction: column;
   padding-top: $paddingBase;
   padding-bottom: $paddingBase * 0.75;
-  font-family: $font;
+  font-family: $fonts;
 }
 
+// #{$fLoadingSelector} .bpk {
+//   color: transparent;
+// }
 
 // Title
 .bpk__titlec {
