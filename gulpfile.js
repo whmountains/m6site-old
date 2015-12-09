@@ -3,6 +3,9 @@ var gulpif      = require('gulp-if')
 var runSequence = require('run-sequence')
 var flatten     = require('gulp-flatten')
 var changed     = require('gulp-changed')
+var lazypipe    = require('lazypipe')
+var merge       = require('merge-stream')
+// var debug       = require('gulp-debug')
 
 var gulp        = require('gulp')
 // var less        = require('gulp-less')
@@ -17,22 +20,29 @@ var ghPages     = require('gulp-gh-pages')
 var uglify      = require('gulp-uglify')
 var minifyin    = require('gulp-minify-inline')
 var htmlmin     = require('gulp-htmlmin')
+var acss        = require('gulp-atomizer')
 
 gulp.task('hello', function() {
   console.log('hello, world!')
 })
 
+var csspipe = lazypipe()
+  .pipe(sass)
+  .pipe(mincss)
+
+var acsspipe = lazypipe()
+  .pipe(acss)
+
 gulp.task('css', function() {
-  return gulp.src('src/css/styles.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(concat('styles.css'))
-    .pipe(mincss())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
+  return merge(
+    gulp.src('src/html/index.html').pipe(acsspipe()),
+    gulp.src('src/css/styles.scss').pipe(csspipe())
+  )
+  .pipe(concat('styles.css'))
+  .pipe(gulp.dest('dist/css'))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
 })
 
 var IMGDIR = 'dist/img';
@@ -157,7 +167,7 @@ gulp.task('deploy', ['critical', 'default'], function() {
 gulp.task('default', ['css', 'images', 'fonts', 'html', 'js'])
 
 gulp.task('watch', ['browserSync'], function() {
-  gulp.watch('src/html/**/*', ['html'])
+  gulp.watch('src/html/**/*', ['html', 'css'])
   gulp.watch('src/css/**/*', ['css'])
   gulp.watch('src/img/progressive/**/*', ['images:progressive'])
   gulp.watch('src/img/baseline/**/*', ['images:baseline'])
