@@ -4,7 +4,8 @@ var runSequence = require('run-sequence')
 var flatten     = require('gulp-flatten')
 var changed     = require('gulp-changed')
 var lazypipe    = require('lazypipe')
-var merge       = require('merge-stream')
+// var merge       = require('merge-stream')
+var series      = require('stream-series')
 // var debug       = require('gulp-debug')
 
 var gulp        = require('gulp')
@@ -22,21 +23,17 @@ var minifyin    = require('gulp-minify-inline')
 var htmlmin     = require('gulp-htmlmin')
 var acss        = require('gulp-atomizer')
 
+// Basic test task
 gulp.task('hello', function() {
   console.log('hello, world!')
 })
 
-var csspipe = lazypipe()
-  .pipe(sass)
-  .pipe(mincss)
-
-var acsspipe = lazypipe()
-  .pipe(acss)
-
+// compile and optimize sass, generate atomic.css,
+// and merge them all together.  (atomic comes second)
 gulp.task('css', function() {
-  return merge(
-    gulp.src('src/html/index.html').pipe(acsspipe()),
-    gulp.src('src/css/styles.scss').pipe(csspipe())
+  return series(
+    gulp.src('src/html/index.html').pipe(csspipe()),
+    gulp.src('src/css/styles.scss').pipe(acsspipe())
   )
   .pipe(concat('styles.css'))
   .pipe(gulp.dest('dist/css'))
@@ -44,6 +41,8 @@ gulp.task('css', function() {
     stream: true
   }))
 })
+
+// Image tasks ---------------------------------------------
 
 var IMGDIR = 'dist/img';
 gulp.task('images:progressive', function() {
@@ -82,11 +81,14 @@ gulp.task('images:other', function() {
 // TODO: only process changed images
 gulp.task('images', ['images:progressive', 'images:baseline', 'images:other'])
 
-gulp.task('fonts', function() {
-  return gulp.src('src/fonts/**/*')
-    .pipe(flatten())
-    .pipe(gulp.dest('dist/fonts'))
-})
+// End image tasks -------------------------------------------------------------
+
+// Delete the fonts task because we're not using custom fonts anymore
+// gulp.task('fonts', function() {
+//   return gulp.src('src/fonts/**/*')
+//     .pipe(flatten())
+//     .pipe(gulp.dest('dist/fonts'))
+// })
 
 gulp.task('html', function() {
   return gulp.src('src/html/**/*')
