@@ -1,10 +1,17 @@
+// $fLoadingSelector: 'html.fonts-loading-one';
+
 .rfea {
   @extend .pageslice;
   width: 100%;
   color: $fg-6;
   background-color: rgba(0,0,0,0);
   flex-direction: column;
+  font-family: $fonts;
 }
+
+// #{$fLoadingSelector} .rfea {
+//   color: transparent;
+// }
 
 .rfea__intro {
   font-size: 25px;

@@ -1,7 +1,19 @@
+// $fLoadingSelector: 'html.fonts-loading-one';
+// $fFallbackSelector: 'html.fonts-fallback-one';
+
 .cya {
   @extend .pageslice;
   height: 450px;
+  font-family: $fonts;
 }
+
+// #{$fLoadingSelector} .cya {
+//   color: transparent;
+// }
+//
+// #{$fFallbackSelector} .cya {
+//   font-family: $fonts-fallback;
+// }
 
 .cya__img {
   width: 100%;

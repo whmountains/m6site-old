@@ -3,11 +3,9 @@
 @import 'variables.scss';
 @import 'global.scss';
 @import 'mixins.scss';
-@import 'fonts.scss';
 @import 'flexslider.css';
 
 // BEM blocks
-@import 'bhead';
 @import 'itxt';
 @import 'fmatter';
 @import 'nav';
@@ -18,3 +16,6 @@
 @import 'rooms';
 @import 'rfea';
 @import 'cya';
+
+//fonts
+@import 'fonts.scss';
