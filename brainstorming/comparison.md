@@ -13,10 +13,16 @@ How do they organize their points?
 
 ### font-awesome
 If you're looking for something specific, then it's above the fold.
-Only thing for first-timers is a
+Only thing ATF for first-timers is title and subtitle
+BTF is dedicated to selling the product
 
-github desktop
-electron
+### github desktop
+ATF screenshot, title, and subtitle for newbies.  Big button for people to download
+inset shadowed narrow slice showing the basic workflow
+carfully integrated screenshots showing how the workflow plays out in the app
+
+### electron
+
 atom
 fonticons
 lastorres
