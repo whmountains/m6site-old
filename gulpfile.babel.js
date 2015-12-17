@@ -25,9 +25,10 @@ var browserSync = require('browser-sync')
 // var minifyin    = require('gulp-minify-inline')
 // var htmlmin     = require('gulp-htmlmin')
 var acss        = require('gulp-atomizer')
-// var babelify    = require('babelify')
+var babelify    = require('babelify')
 var browserify  = require('browserify')
 var watchify    = require('watchify')
+var hotload     = require('livereactload')
 
 // Basic test task
 gulp.task('hello', function() {
@@ -139,13 +140,15 @@ gulp.task('images', ['images:progressive', 'images:baseline', 'images:other'])
 gulp.task('html', function() {
   return gulp.src('src/html/**/*')
     .pipe(gulp.dest('dist'))
+    .pipe(browserSync.reload({stream: true}))
 })
 
 // js task ---------------------------------------------------------------------
 
 var bConf = {
   entries: 'src/components/root.jsx',
-  debug: true
+  debug: true,
+  transform: [babelify]
 }
 
 gulp.task('js', function() {
@@ -157,17 +160,22 @@ gulp.task('js', function() {
 
 gulp.task('js-watch', function () {
 
-  var b = browserify({
+  let wConf = {
     ...bConf,
     cache: {},
     packageCache: {},
     plugin: [watchify]
-  })
+  }
+  wConf.transform.push(hotload)
+
+  var b = browserify(wConf)
 
   var bundle = function () {
     b.bundle()
+      .on('error', gutil.log)
       .pipe(source('bundle.js'))
       .pipe(gulp.dest('dist'))
+      .pipe(browserSync.reload({stream: true}))
   }
 
   b.on('update', bundle)
@@ -185,7 +193,7 @@ gulp.task('clean', function() {
 
 
 // spin up a dev server (depend on default-watch, not default)
-gulp.task('browserSync', ['default'], function() {
+gulp.task('browserSync', ['default-watch'], function() {
   browserSync({
     server: {
       baseDir: './dist'
