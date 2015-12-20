@@ -1,18 +1,23 @@
-var React = require('react')
-var Radium = require('radium')
+import React, { PropTypes } from 'react'
+import Radium from 'radium'
+
+import Spacer from './FlexSpacer.jsx'
 
 class Nav extends React.Component {
+  static propTypes = {
+    height: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]).isRequired
+  }
   render() {
 
     let navContainerStyles = {
       display: 'flex',
       width: '100%',
-      height: '60px',
-      alignItems: 'center',
+      height: this.props.height,
+      alignItems: 'flex-end',
       paddingRight: '25px'
-    }
-    let navSpacerStyles = {
-      flexGrow: '1'
     }
     let navItemStyles = {
       color: 'white',
@@ -23,17 +28,19 @@ class Nav extends React.Component {
         textDecoration: 'underline'
       }
     }
+    let booknowStyles = {
+      fontWeight: 'bold'
+    }
 
     return (
       <div style={navContainerStyles}>
-        <div style={navSpacerStyles}></div>
-        <a href="#" key="one" style={navItemStyles}>Nav Item</a>
-        <a href="#" key="two" style={navItemStyles}>Nav Item</a>
-        <a href="#" key="three" style={navItemStyles}>Nav Item</a>
-        <a href="#" key="four" style={navItemStyles}>Nav Item</a>
-        <a href="#" key="five" style={navItemStyles}>Nav Item</a>
-        <a href="#" key="six" style={navItemStyles}>Nav Item</a>
-        <a href="#" key="seven" style={navItemStyles}>Nav Item</a>
+        <Spacer/>
+        <a href="#" key="six" style={navItemStyles}>About Us</a>
+        <a href="#" key="two" style={navItemStyles}>Activities</a>
+        <a href="#" key="three" style={navItemStyles}>Accommodations</a>
+        <a href="#" key="five" style={navItemStyles}>Backpacking</a>
+        <a href="#" key="four" style={navItemStyles}>Travel Info</a>
+        <a href="#" key="seven" style={[navItemStyles, booknowStyles]}>Book Now</a>
       </div>
     )
 

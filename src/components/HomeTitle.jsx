@@ -1,7 +1,10 @@
 var React = require('react')
 var Radium = require('radium')
+var Color = require('color')
 
 var vars = require('./vars.js')
+
+var SpacerSlice = require('./SpacerSlice.jsx')
 
 class HomeTitle extends React.Component {
 
@@ -17,7 +20,7 @@ class HomeTitle extends React.Component {
       color: vars.textColor,
       fontFamily: vars.fonts,
       fontSize: '56px',
-      marginBottom: '10px'
+      margin: '0'
     }
     let subtitleStyles = {
       color: 'white',
@@ -25,8 +28,7 @@ class HomeTitle extends React.Component {
       fontSize: '25px'
     }
     let buttonRowStyles = {
-      display: 'flex',
-      marginTop: '15px'
+      display: 'flex'
     }
     let buttonBoxStyles = {
       display: 'flex',
@@ -34,8 +36,12 @@ class HomeTitle extends React.Component {
       alignItems: 'center'
     }
     let buttonLabelStyles = {
-      color: vars.textColor,
-      fontSize: '15px'
+      color: Color(vars.textColor)
+        .darken(0.25)
+        .desaturate(0.75)
+        .hexString(),
+      fontSize: '15px',
+      marginBottom: '2px'
     }
     let buttonStyles = {
       width: '220px',
@@ -61,9 +67,13 @@ class HomeTitle extends React.Component {
 
         <h1 style={h1Styles}>El Refugio</h1>
 
+        <SpacerSlice height="8px"/>
+
         <div style={subtitleStyles}>
           A family-oriented vacation destination located on Lago Espolon
         </div>
+
+        <SpacerSlice height="32px"/>
 
         <div style={buttonRowStyles}>
           <div style={buttonBoxStyles}>

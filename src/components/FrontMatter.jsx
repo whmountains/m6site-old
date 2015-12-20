@@ -3,6 +3,8 @@ var React = require('react')
 
 var Nav = require('./Nav.jsx')
 var HomeTitle = require('./HomeTitle.jsx')
+var HomeHero = require('./HomeHero.jsx')
+var SpacerSlice = require('./SpacerSlice.jsx')
 
 // var vars = require('./vars.js')
 
@@ -10,7 +12,6 @@ class FrontMatter extends React.Component {
   render() {
 
     var divStyles = {
-      height: '750px',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -20,9 +21,12 @@ class FrontMatter extends React.Component {
     }
 
     return (
-      <div style={divStyles}>
-        <Nav/>
-        <HomeTitle/>
+      <div style={divStyles}> {/* 750px high */}
+        <Nav height="32px"/>
+        <SpacerSlice height="64px"/>
+        <HomeTitle/> {/* Currently 180px high */}
+        <SpacerSlice height="64px"/>
+        <HomeHero/> {/* 410 px high */}
       </div>
     )
   }

@@ -1,33 +1,14 @@
-var connect = require('connect')
-var http = require('http')
+var webpack = require('webpack');
+var WebpackDevServer = require('webpack-dev-server');
+var config = require('./webpack.config');
 
-var app = connect()
+new WebpackDevServer(webpack(config), {
+  hot: true,
+  historyApiFallback: true
+}).listen(3000, 'localhost', function (err, result) {
+  if (err) {
+    console.log(err);
+  }
 
-// gzip/deflate outgoing responses
-var compression = require('compression')
-app.use(compression())
-
-// store session state in browser cookie
-// var cookieSession = require('cookie-session')
-// app.use(cookieSession({
-//     keys: ['secret1', 'secret2']
-// }))
-
-// parse urlencoded request bodies into req.body
-// var bodyParser = require('body-parser')
-// app.use(bodyParser.urlencoded())
-
-var morgan = require('morgan')
-app.use(morgan('dev'))
-
-var static = require('serve-static')
-app.use(static(__dirname + '/dist'))
-
-// respond to all requests
-app.use(function(req, res){
-  res.end('Hello from Connect!\n')
-})
-
-//create node.js http server and listen on port
-http.createServer(app).listen(8000)
-console.log('listening on localhost:8000')
+  console.log('Listening at localhost:3000');
+});

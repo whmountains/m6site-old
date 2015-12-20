@@ -6,6 +6,6 @@
   ],
   "plugins": [
     "transform-es2015-modules-commonjs",
-    "livereactload/babel-transform"
+    "transform-flow-strip-types"
   ]
 }

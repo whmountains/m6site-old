@@ -7,10 +7,37 @@
   "scripts": {
     "start": "node ./devserver.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node ./devserver.js"
+    "serve": "node ./devserver.js",
+    "build": "node_modules/.bin/webpack --progress",
+    "watch": "node_modules/.bin/webpack --progress --watch",
+    "dev": "node_modules/.bin/webpack-dev-server --progress --hot --content-base ./dist",
+    "hot": "node devserver.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.3.16",
+    "babel-plugin-transform-flow-strip-types": "^6.3.15",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "eslint-plugin-react": "^3.11.3",
+    "radium": "^0.15.3",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-hot-loader": "^1.3.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "color": "^0.10.1",
+    "file-loader": "^0.8.5",
+    "json-loader": "^0.5.4",
+    "react-addons-pure-render-mixin": "^0.14.3",
+    "url-loader": "^0.5.7"
+  }
 }
