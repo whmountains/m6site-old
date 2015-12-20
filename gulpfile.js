@@ -13,7 +13,6 @@ var imagemin    = require('gulp-imagemin')
 var del         = require('del')
 var browserSync = require('browser-sync')
 var critical    = require('critical')
-var ghPages     = require('gulp-gh-pages')
 var uglify      = require('gulp-uglify')
 var minifyin    = require('gulp-minify-inline')
 var htmlmin     = require('gulp-htmlmin')
@@ -147,11 +146,6 @@ gulp.task('critical', ['default'], function() {
     width: 1300,
     height: 1200
   });
-})
-
-gulp.task('deploy', ['critical', 'default'], function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
 })
 
 gulp.task('default', ['css', 'images', 'fonts', 'html', 'js'])
