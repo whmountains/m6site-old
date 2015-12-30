@@ -8,14 +8,14 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background-color: $bg-2;
+  background-color: #294261;
   overflow: hidden;
   display: flex;
   box-sizing: border-box;
   align-items: center;
   height: 209px;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0px -3px 8px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 0 7px 7px rgba(0,0,0,.2);
   font-family: $fonts;
 }
 
@@ -60,10 +60,10 @@
 }
 
 .intro i {
-  color: $fg-mute-2;
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .intro p {
   font-size: 18px;
-  color: rgba(255,255,255,0.7);
+  color: hsla(0, 0%, 100%, 0.9);
 }

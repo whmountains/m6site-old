@@ -29,6 +29,13 @@
   align-items: center;
   margin-right: $actm/2;
   margin-left: $actm/2;
+  cursor: pointer;
+}
+
+.acts__act:hover .acts__img {
+  transition: 0.5s;
+/*   opacity: 0.5; */
+  -webkit-filter: brightness(1.2);
 }
 
 .acts__caption {

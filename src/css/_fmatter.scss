@@ -2,13 +2,19 @@
 .fmatter {
   @extend .pageslice;
   height: 1000px;
-  background: $bg-1;
+  // background: radial-gradient(circle farthest-side at right bottom,
+  //   #666 20%,
+  //   // #f8cdda 25%,
+  //   #1d2b64 80%//,
+  //   // #0e153a 98%
+  // );
+  background: hsla(0,0%,23%,1);
   flex-direction: column;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   z-index: 2;
   margin-bottom: $paddingBase;
   font-family: roboto;
+  overflow: visible;
 }
 .fmatter__textc {
   margin-top: 40px;
@@ -26,6 +32,7 @@
   margin: 0 auto;
   color: $fg-1;
   font-size: 0.7 * $titleSize;
+  color: #FFFDFA;
 }
 
 .fmatter__subtitle {
@@ -61,6 +68,7 @@
   color: #fffdfa;
   border: none;
   box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  border-radius: 2px;
 }
 
 .fmatter__btn_pic {
