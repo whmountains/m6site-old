@@ -1,0 +1,15 @@
+.mtns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ccc;
+}
+
+.mtns__imgc {
+  width: 800px;
+
+  img {
+    width: 100%;
+  }
+
+}

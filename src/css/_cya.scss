@@ -5,6 +5,8 @@
   @extend .pageslice;
   height: 450px;
   font-family: $fonts;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 14%);
 }
 
 // #{$fLoadingSelector} .cya {
@@ -17,14 +19,17 @@
 
 .cya__img {
   width: 100%;
+}
+.cya__imgc {
+  margin: auto;
   position: relative;
-  bottom: 175px;
+  bottom: 300px;
 }
 
 .cya__sl {
   display: flex;
   flex-direction: column;
-  background-color: $bg-7;
+  background-color: hsla(0, 0%, 0%, 0.23);
   color: $fg-7;
   position: absolute;
   top: 0px;
