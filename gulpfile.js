@@ -27,7 +27,7 @@ gulp.task('css', function() {
     .pipe(sass())
     .pipe(concat('styles.css'))
     .pipe(mincss())
-    .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({
       stream: true
