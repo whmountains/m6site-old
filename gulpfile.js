@@ -17,12 +17,15 @@ var uglify      = require('gulp-uglify')
 var minifyin    = require('gulp-minify-inline')
 var htmlmin     = require('gulp-htmlmin')
 
+var plumber = require('gulp-plumber')
+
 gulp.task('hello', function() {
   console.log('hello, world!')
 })
 
 gulp.task('css', function() {
   return gulp.src('src/css/styles.scss')
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(concat('styles.css'))
@@ -79,6 +82,7 @@ gulp.task('fonts', function() {
 
 gulp.task('html', function() {
   return gulp.src('src/html/**/*')
+    .pipe(plumber())
     .pipe(flatten())
     .pipe(gulpif('*.html', htmlmin({
       removeComments: true,
